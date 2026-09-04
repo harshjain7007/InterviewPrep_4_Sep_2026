@@ -1,0 +1,287 @@
+
+
+explain your recent project, what is role of this project, and what are the hardest challanges faces during makeing that project  explain any one
+
+
+:--  HTML ---------
+what is semantic tag and non semantic tag in HTML
+Differance between HTML and HTML5
+
+
+:-- CSS ----
+what is position values in CSS
+how many ways for integrating CSS 
+
+
+
+:- --- JavaScript :----
+what is hosting
+How many scoped in JavaScript
+what is the differance between let, const, and var keyward
+do know closure ? , why we can used closure 
+differance between ES5 and ES6
+what call back function why we can use call function 
+what is higer order function react
+explain asyncronus and synchoronus nature in JavaScript, // by defhalte nature of javaScript 
+do you know call back hell
+what is funtion currying in js, write function currying systax 
+if we want the function invocation after funtion defination || IIFE :- write a systax for LIFE
+what is shallow copy and deep copy in javaScript
+Deboucing and Throttling 
+differane rest parameter and spread operator 
+what si recursion in javaScript 
+generator function 
+temprale dead zone 
+Apply , call, bind 
+pollyfill
+promises chaining
+e.preventdefhaulte()
+typeof [] // object bcz  Arrays inherit from the Array constructor,
+Differance between attribute and Properties
+Diff between library and framwork
+What is the synthetic event in react js
+delegation and pooling
+
+
+:- ---- Technical  ----------  For
+// -----1st ask that code output 
+for (var i = 0; i < 5; i++) {
+        setTimeout(() => console.log(i), 0);
+}
+// O/P is 5,5,5,5,5 ----
+// ----- give task i need print  0,1,2,3,4 and dont use let and const,   task related to closure 
+for (var i = 0; i < 5; i++) {
+    function fun(key) {
+        setTimeout(() => console.log(key), 0);
+    };
+    fun(i)
+}
+
+
+
+
+
+
+let num = 0
+console.log(num++)
+console.log(++num)
+console.log(num)
+
+
+
+for(let i = 0; i < 5; i++ ){
+    if(i === 3)
+    continue;
+    console.log(i)
+}
+
+const obj = { name : "" }
+obj.name = "new name"
+console.log(obj.name)
+
+
+console.log(1)
+setTimeout(() => {
+    console.log(2)
+},0)
+console.log(3)
+
+
+
+
+// ----- Event Loop :-- 
+console.log("start");
+
+setTimeout(function () {
+  console.log("timeout");
+}, 0);
+
+Promise.resolve().then(function () {
+  console.log("promise");
+});
+
+console.log("end");
+
+
+//--- 
+console.log("start");
+setTimeout(() => {
+	console.log("timer 1");
+}, 2);
+const prom = new Promise((resolve, reject) => {
+	console.log("prom");
+ resolve();
+});
+Promise.resolve().then(() => {
+	console.log("resolved promise");
+});
+setTimeout(() => {
+	console.log("timer 2");
+}, 0);
+setTimeout(() => {
+	console.log("timer 3");
+}, 1);
+prom.then(() => {
+ console.log("prom then");
+});
+console.log("end");
+
+// -- Output is :-
+start
+prom
+end
+resolved promise
+prom then
+timer 2
+timer 3
+timer 1
+
+
+o/p :- strat, end, promise, timeout
+"promise" is printed when the Promise resolves, which occurs after "end" due to the asynchronous nature of promises.
+"timeout" is printed after "promise", because even though setTimeout is set to 0 milliseconds, it still schedules its callback asynchronously after the current code execution completes.
+
+
+
+function c(){
+    console.log(a) // 5
+}
+function b(){
+  console.log(a)  // undefined
+  var a = 10 // if we can not write that line so both value of a is 5
+  c()
+  console.log(a) // 10
+}
+var a = 5
+b()
+
+
+create pollfill for filter method 
+print repeating element of array.
+let arr = [ 2, 4, 5, 2, 2 , 2, 100, 10, 10, 33,44 ];
+function checkRepeatedVal(arr){
+    let obj = {};
+    for(let element of arr){
+        if(obj[element]){
+           obj[element] +=1; 
+        }else {
+           obj[element] =1; 
+        }
+    }
+    return Object.keys(obj).reduce((a,b)=> obj[a]>obj[b] ? a: b);
+}
+
+console.log(checkRepeatedVal(arr));
+write program for reversed string without any builtin mehtod  // do you know recursion 
+write castum programm for print 1 to 20 number without using any loop 
+write a function sort number arr = [ 2, 4, 5, 100, 10, 1000, 33,44 ] 
+wite a custum function for flatten array 
+
+
+
+:--- react 
+what is react, react is a framwork or library
+what is vertual dom, why vertual dom is faster then real dom
+what is hooks in react,
+differance between props and state,
+what is the react half cycle methods in array,
+how can you optimize a performance of react web application,
+How can you handle error in react,
+do know prop drilling in react,
+what is promises,
+do you integrate API ?, what type of method you used for fetch data from API
+what kind of things your are used for state managment
+do you use redux ? : what is redux 
+what is memorization in react 
+suppose we are print :- table data and we don't call api for printing same data
+control and uncontroled component in react 
+:- can we send data from child parent ? if yes then how
+:- what is promises chaining in react 
+:- Custum hooks : can you create custum hooks in react ?
+:- useRef hook 
+:- pure component
+:- how can you handle errors in react :-  Error Boundrys 
+:- What is keys in react 
+:- prent function invoked a child function , use ref hook 
+:- what is differance between context API and redux 
+:- what is protoTypes 
+state lifting
+Error bounderies
+
+
+
+react technical 
+:- print counting number number count hona xhaiye 10 tak 
+:- create a stop watch
+:- write a counter which start from 1 goes to 5 , and they will go its wise versa also 
+
+---  Node 
+:- what is current version of node 
+:- what is node, nodejs is multithered or single threded; how node workes multi thereded
+:- Diifearance between PUT and PATCH method
+:- How do you connect and interact with databases in Node.js applications?
+:- What is middleware, types of middleware, why we can use
+:- what is Caching in node
+:- if you need to save more then 100GB file in your dataBase then what your best approche for save that file 
+:- How do you optimize the performance of a Node.js application?
+: -indexing 
+:- streams
+:- message queues 
+:- cloud ecperience ()
+
+
+:--- TypeScript ------------ 
+:- differance between javaScript and TypeScript, fast, and better
+
+
+
+:-   --------- React 
+1.) How does React's reconciliation algorithm work?
+. This explores their knowledge of React's underlying mechanism for efficiently updating the DOM.
+
+
+2.) Can you explain what React Fiber is and how it improves upon the older reconciliation algorithm?
+. This delves into more advanced React concepts and the improvements in React 16+.
+
+
+3.) What is the significance of the key prop, and why is it important in React?
+. This checks their knowledge of React’s diffing algorithm and the role of keys in list rendering. 
+
+
+4.) What is optional chaining operator .? in javaSCript.
+Example :- 
+const user = {
+  profile: {
+    name: "John",
+    address: {
+      city: "New York"
+    }
+  }
+};
+
+// Using optional chaining
+const city = user.profile?.address?.city; // "New York"
+const street = user.profile?.address?.street; // undefined, no error thrown
+
+// Without optional chaining
+const city = user.profile && user.profile.address && user.profile.address.city;
+
+
+5.) What are the main differences between React Router v5 and v6?
+. This assesses their familiarity with routing in React and recent updates.
+
+
+
+
+
+
+//------------  Nodejs topics for creack 7-8 years interviews :- 
+microservices
+event loop
+message queues
+cloud 
+kubernets
+docker
+dabatabses sql/nosql
+system design
+alogorithm

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <script>
+          function stopWatch(){  // constructor funtion
+               let startTime, endTime, running, duration = 0;
+
+
+               this.start = function() {
+                    if(running)
+                    throw new Error('stopWatch is running...');
+
+                    running = true;
+
+                    startTime = new Date();
+               }
+
+               this.stop = function() {
+                    if(!running)
+                    throw new Error('StopWatch is not started');
+
+                    running = false;
+
+                    endTime = new Date();
+
+                    const seconds = (endTime.getTime() - startTime.getTime()) / 1000;  /// for miliseconds we can devided by 1000
+
+                    duration += seconds;
+               }
+
+
+               this.reset = function(){
+                    startTime = null;
+                    endTime = null;
+                    running = false;
+                    duration = 0;
+               }
+
+
+
+               Object.defineProperties(this, 'duration', {
+                    get: function() { return duration; } 
+               })
+          }
+          const sw = stopWatch();
+     </script>
+</body>
+</html>

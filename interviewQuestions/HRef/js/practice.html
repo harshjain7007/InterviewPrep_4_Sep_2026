@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          #container {
+               background-color: aqua;
+               height: 50vh;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 100%;
+               text-align: center;
+          }
+
+          #child {
+               background-color: red;
+               width: 70%;
+               margin: auto;
+          }
+     </style>
+</head>
+
+<body>
+     <div id="container">
+          Lorudiandae, consectetur. Quia, qui.
+          <div id="child">
+               <button id="jokeBtn">nxt</button>
+
+          </div>
+          <div >
+               <p id="joke"></p>
+          </div>
+     </div>
+<script>
+
+var num = parseInt(prompt("Enter your positive number: ")); 
+let isPrime = true;
+
+
+// if(num === 1){
+//      console.log("its neither prime or not compsite number")
+// }else{
+//      if(num > 1){
+//           for(let i = 2; i < num; i++ ){
+//                if(num % i === 0 ){
+//                     isPrime += false;
+//                     break;
+//                }else{
+//                    console.log("its not a prime")    
+//                //     isPrime += true;
+//                    break;
+//                }
+//           }
+  
+//      }else{
+//           console.log("its not a prime number")
+//      }
+// }
+
+// if(isPrime){
+//      console.log("its not  a prime")    
+// }else{
+//      console.log("its  a prime")    
+// }
+
+console.log(num);
+// // alert("Your  " + name);
+       
+     </script>
+</body>
+
+</html>

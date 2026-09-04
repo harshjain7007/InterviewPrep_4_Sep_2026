@@ -1,0 +1,218 @@
+:------------ MERN based Question :- 
+Task: Build a full-stack MERN application with the following features:
+
+Front-end (React or Next.js):
+
+Create a form that collects the following information:
+Username (string input)
+Age (number input)
+Email (email input)
+Checkbox for a boolean value (e.g., agreement to terms)
+Hobbies (multi-select with options like cricket, pool, chess)
+Gender (radio buttons for gender selection)
+User profile picture (image upload)
+Implement form validation to ensure proper data entry.
+When the form is submitted, the data is sent to the back-end and stored in a MongoDB database.
+Back-end (Node.js, Express, MongoDB):
+
+The server should handle user creation (save user data in MongoDB).
+Create an API to get, update, and delete users.
+Display and Manage Users:
+
+After submission, display all user details in a table format on the front-end.
+The table should have an action column with two buttons: Edit and Delete.
+Edit: Clicking this button opens a modal where all the user's details are pre-filled, allowing them to be modified and saved back to the database.
+Delete: Clicking this button removes the specific user from the database.
+This approach ensures that you're building both the client and server-side logic, using MongoDB to store the data, and providing a user-friendly interface for creating, updating, and deleting users. It covers key MERN stack principles like CRUD operations, form validation, and API development.
+
+
+
+
+:- write a code create full stack web application  based on MERN stack, if you have a nextjs  
+:- Time : 1 Hours, don't use any AI tool write custum login
+
+:- in front-end side create a form which have input fields with validations like :- 
+username : string,
+age : number,
+email: string,
+check: boolean,
+hobbies: Array ( multiselector ) inputs like :- cricket, pool, chess
+gender: string ( radio buttons )
+user profile : (Image)
+
+
+
+if we click on submit button of this form then user created our data base like mongoDB  
+
+and display its all user details in side table  and table also have action column they have 2 buttons EDIT and DELETE 
+
+:- user click edit button then open one modal and modal also have all user detail input fiels and we esily modify our user detail click on save button 
+
+:- if we click DELETE button on that table then we remove specfic user 
+
+
+
+
+:---------  React Based :- 
+Task: Build a React application and fetch data from an API (https://jsonplaceholder.typicode.com/posts). The goal is to:
+
+Fetch the data: Get the posts from the API and filter out unique userIds.
+Display in a table: Show the data with unique userIds in a table. Include:
+Pagination: Display 5 posts per page.
+Action column: Add buttons for Edit and Delete.
+Edit button: Clicking should allow modifying the post details, updating the state of the array.
+Delete button: Clicking should remove the post from the state.
+This task tests your ability to fetch data, handle pagination, manage state, and create actions like editing and deleting data within a React application.
+
+
+:- write a automatically increment counter which started from 1 and automatically break that count getting count number 10 :-
+
+
+
+
+:------ Node Based :-
+:-  Create APIs perform CRUD operation and apply filters use local database :-  
+:-  create api for add user ,
+ user recived info like {
+    name: "",
+    age: 0,
+    salary: 1000,
+    companyName: ,
+ }
+:- create api for delete and update user :-
+:- create api for find out users according given params minmun salary and maximum salary  
+ end point like  :- /minSalary=500?maxSalary=1000
+:- :- create api for find out users according given params like company name  end point like  :- /companyName=""
+
+
+
+
+
+
+
+
+:---------------  javaScript machine test :-
+:---- solve any two :- 
+:---- Time 40 min :- 
+Question 1 :- write program for rotate square matrix 90 degree clock wise and anti clock wise :- 
+let matrix = [ [ 1, 2, 3 ],
+               [ 4, 5, 6 ],
+               [ 7, 8, 9 ] ]
+
+Expected clock wise O/P = [ [ 7, 4, 1 ],
+                            [ 8, 5, 2 ]
+                            [ 9, 6, 3] ]
+
+Expected anti clock wise O/P = [ [ 3, 6, 9 ],
+                                 [ 2, 5, 8 ]
+                                 [ 1, 4, 7 ] ]
+
+
+
+Question 2 :- add two numbers without using plus operator :-
+
+
+
+Question 3 :- Find out Element this array and print array according to country's wise how many peoples in ind, aus and sl For Example :-
+const data =  [
+    {
+        id: 1,
+        name: "rohit",
+        age: 24,
+        country: "ind"
+    },
+     {
+        id: 2,
+        name: "johnson",
+        age: 30,
+        country: "aus"
+    },
+     {
+        id: 3,
+        name: "devid",
+        age: 32,
+        country: "aus"
+    },
+     {
+        id: 4,
+        name: "nikhil",
+        age: 20,
+        country: "ind"
+    },
+     {
+        id: 5,
+        name: "tishara",
+        age: 25,
+        country: "sl"
+    },
+    {
+        id: 6,
+        name: "parera",
+        age: 25,
+        country: "sl"
+    },
+    {
+        id: 7,
+        name: "rishab",
+        age: 25,
+        country: "ind"
+    },
+]
+
+
+Expected O/P :-  [
+    {
+        "ind": [
+            {
+                "id": 1,
+                "name": "rohit",
+                "age": 24,
+                "country": "ind"
+            },
+            {
+                "id": 4,
+                "name": "nikhil",
+                "age": 20,
+                "country": "ind"
+            },
+            {
+                "id": 7,
+                "name": "rishab",
+                "age": 25,
+                "country": "ind"
+            }
+        ],
+        "aus": [
+            {
+                "id": 2,
+                "name": "johnson",
+                "age": 30,
+                "country": "aus"
+            },
+            {
+                "id": 3,
+                "name": "devid",
+                "age": 32,
+                "country": "aus"
+            }
+        ],
+        "sl": [
+            {
+                "id": 5,
+                "name": "tishara",
+                "age": 25,
+                "country": "sl"
+            },
+            {
+                "id": 6,
+                "name": "parera",
+                "age": 25,
+                "country": "sl"
+            }
+        ]
+    }
+]
+
+
+
+

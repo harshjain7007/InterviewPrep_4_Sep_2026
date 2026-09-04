@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+</body>
+<script>
+ 
+function Circle(radius){
+
+this.radius = radius;
+
+let defaultLocation = { x: 0, y: 0 };
+
+this.getDefaultLocation = function() {
+     return defaultLocation
+}
+
+this.draw = function(){
+     console.log('draw');
+}
+
+Object.defineProperty(this, 'defaultLocation', {//// first argument is circular object, second argument is name of the properties, and 3rd argument is an object 
+     get: function(){ /// getter is a function to read property
+          return defaultLocation; //// this is part of the closure of this inner function 
+     },
+     //// if you want to set tha value of tha property from tha outSide so difine a setter
+     set: function(value){ //// takes a one argument
+
+          // we can also write tha validation before set tha value 
+          if(!value.x || !value.y)
+          throw new Error('Invalid Location.'); ////  this is benefjit of setter 
+
+          defaultLocation =  value;
+     }
+
+});
+}
+const circle = new Circle(10);
+console.log(circle)  // check this on html live server which is show (...)  which is computed property 
+// circle.getDefaultLocation();
+circle.defaultLocation = 1;
+circle.draw();
+
+
+</script>
+</html>

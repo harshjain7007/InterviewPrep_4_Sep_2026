@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>insertAdjacentElement</title>
+</head>
+<body>
+     <div class="container">
+          <button>click</button>
+          <div id="create">
+               <p>okay</p>
+               <!-- <div class="child">
+                    <p>its a inserted Html</p>
+               </div> -->
+          </div>
+     </div>
+
+     <script>
+    const btn = document.querySelector('.container')
+// console.log("run fun")
+    const updateDom = () => {
+         const cre = document.getElementById('create')
+         const htmlData = `<div class="child">
+                    <p>its a inserted Html</p>
+               </div>`
+          cre.insertAdjacentHTML('afterend', htmlData) // these 4 properties use in this 1st paramenter 1. beforebegin  || 2. afterbegin || 3. beforeend || 4. afterend
+          console.log(cre)
+    }
+
+    btn.addEventListener('click',() => updateDom())
+     </script>
+</body>
+</html>
